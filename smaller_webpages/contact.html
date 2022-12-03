@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Dreamy Cafe">
+    <meta name="keywords"    content="Dreamy Cafe Online Shop">
+    <meta name="author"      content="B-IT Group">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Cafe</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <nav>
+                <div class="row">
+                    <div class="nav-row">
+                        <div class="logo">
+                            <a href="index.html"><img src="../images/logo.png" alt="dreamy cafe"></a>
+                        </div>
+                        <div class="navbar">
+                            <div class="navmenu">
+                                <ul>
+                                    <li class="nav-content"><a href="../index.html">Home</a></li>
+                                    <li class="nav-content"><a id="nav_contact" href="contact.html">Contact</a></li>
+                                </ul>    
+                            </div>
+                            <div class="personal">
+                                <div class="p-items">
+                                    <a class="regi" href="../registration.html">Register</a>
+                                    <a class="cart" href="../order.html"><i class="fa-solid fa-cart-shopping"></i></a>    
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contact-main">
+        <hr id="contact-hr">
+        <article id="contact-form">
+            <form id="survey" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                <h2><i class="fas fa-pencil-alt"></i> Send us a message</h2>
+                <div class="contact-box">
+                    <label for="name">Your name</label>
+                    <input type="text" name="Customer NAME" id="name" placeholder="Dreamy Cafe" required>
+                </div>
+                <div class="contact-box">
+                    <label for="email">Your email</label>
+                    <input type="email" name="Customer EMAIL" id="email" placeholder="dreamycafe@gmail.com" required>
+                </div>
+                <div class="contact-box">
+                    <label for="phone_number">Your phone number</label>
+                    <input type="tel" name="Customer PHONE NUMBER" id="phone_number" placeholder="+84 123-456-789 (This is not required!)">
+                </div>
+                <div class="contact-box">
+                    <label for="feedback">Your feedback</label>
+                    <textarea name="Customer FEEDBACK" id="feedback" placeholder="Give us some feedback here ..." required rows="9"></textarea>
+                </div>
+                <div class="submit">
+                    <button class="pointer" type="submit" value="Submit" aria-live="assertive">Submit</button>
+                </div>
+            </form>
+        </article>
+
+        <aside id="contact-aside">
+            <h2>"More messages, better services!"</h2>
+            <p> We promise that all of your information would not be used by a third party.
+                Your feedback would help us to develop our service and keep a smile on your face whenever you come to us.
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        <div id="footer-block">
+            <div id="footer-logo">
+                <img src="../images/logo.png" alt="logo">
+            </div>
+            <div id="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Address: Ha Noi, Viet Nam</li>
+                    <li><i class="fa-solid fa-square-phone-flip"></i> Hotline: +84-123-456-789</li>
+                    <li><i class="fa-solid fa-envelope"></i> Email: customerservice@dreamycafe.com.vn</li>
+                    <li><i class="fa-solid fa-clock"></i> Opening time: 08:00 - 23:00</li>
+                </ul>
+            </div>
+            <div id="footer-social">
+                <h3>Social</h3>
+                <ul id="footer-social-icon">
+                    <li><a href="page_not_found.html"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="page_not_found.html"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="page_not_found.html"><i class="fa-brands fa-spotify"></i></a></li>
+                </ul>
+            </div>
+            <div id="copyright">
+                ©Copyright 2022, Designed by B-IT Group
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

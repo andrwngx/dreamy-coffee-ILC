@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Dreamy Cafe">
+    <meta name="keywords"    content="Dreamy Cafe Online Shop">
+    <meta name="author"      content="B-IT Group">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Cafe</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <nav>
+                <div class="row">
+                    <div class="nav-row">
+                        <div class="logo">
+                            <a href="index.html"><img src="images/logo.png" alt="dreamy cafe"></a>
+                        </div>
+                        <div class="navbar">
+                            <div class="navmenu">
+                                <ul>
+                                    <li class="nav-content"><a href="index.html">Home</a></li>
+                                    <li class="nav-content"><a href="smaller_webpages/contact.html">Contact</a></li>
+                                </ul>    
+                            </div>
+                            <div class="personal">
+                                <div class="p-items">
+                                    <a class="regi" href="registration.html">Register</a>
+                                    <a id="nav_cart" class="cart" href="order.html"><i class="fa-solid fa-cart-shopping"></i></a>    
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="cart-main">
+        <div id="cart-form">
+            <div id="cart-form-header">
+                <h2><i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;" ></i> Thank you for choosing us</h2>
+                <p>Have a nice day!</p>
+            </div>
+            <div id="cart-form-container">
+                <div id="cart-form-content">
+                    <form id="order_form" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                        <p id="cart-form-content-req"><span class="required_symbol">*</span> indicates required field</p>
+                        <div class="cart-form-groups">
+                            <fieldset class="cart-field">
+                                <h3>Receiver Information</h3>
+                                <label for="full_name"><i class="fa fa-user"></i> Full Name <span class="required_symbol">*</span></label>
+                                <input type="text" name="Full_name" id="full_name" placeholder="Dreamy Cafe">
+                                <label for="contact_number"><i class="fa-sharp fa-solid fa-phone"></i> Contact Number <span class="required_symbol">*</span></label>
+                                <input type="text" name="Contact_number" id="contact_number" placeholder="+84-123-456-789">
+                                <label for="cart_email"><i class="fa-sharp fa-solid fa-envelope"></i> Email (for receipt) <span class="required_symbol">*</span></label>
+                                <input type="email" name="Email" id="cart_email" placeholder="customerservice@dreamycafe.com.vn">
+                                <h3>How the order would be taken? <span class="required_symbol">*</span></h3>
+                                <div class="cart-choice">
+                                    <label><input type="radio" onclick="delcheck();" name="Take" id="delivery" value="Delivery"> Delivery</label>
+                                    <label><input type="radio" onclick="delcheck();" name="Take" id="pickup" value="Pickup"> Pickup</label>
+                                </div>
+                                <div id="delchose">
+                                    <fieldset id="delivery_chose">
+                                        <div class="cart-text">
+                                            <label for="delivery_address"><i class="fa-sharp fa-solid fa-location-dot"></i> Delivery Address <span class="required_symbol">*</span></label>
+                                            <input type="text" name="Delivery_address" class="d-address" id="delivery_address">
+                                        </div>
+                                        <div class="cart-choice">
+                                            <label id="same_add_title">Billing Address is same as Delivery Address</label>
+                                            <input type="checkbox" name="Same_as_delivery_address" value="Yes" id="same_add" onclick="duplicate(event)">
+                                        </div>
+                                        <div class="cart-text">
+                                            <label for="billing_address"><i class="fa-sharp fa-solid fa-location-dot"></i> Billing Address</label>
+                                            <input type="text" name="Delivery_address" class="d-address" id="billing_address">        
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <h3>Payment method <span class="required_symbol">*</span></h3>
+                                <div class="cart-choice">
+                                    <label><input type="radio" onclick="onlcheck();" name="Pay" id="pickup_pay" value="On pickup"> On pickup</label>
+                                    <label><input type="radio" onclick="onlcheck();" name="Pay" id="onl_pay" value="Online"> Online</label>
+                                </div>
+                            </fieldset>
+                            <div id="onlchose">
+                                <fieldset id="onl_payment_chose">
+                                    <div class="cart-choice">
+                                        <label><i class="fa-sharp fa-solid fa-sack-dollar"></i> Credit card type <span class="required_symbol">*</span></label>
+                                        <label class="cards" for="visa"><input id="visa" type="radio" name="Card" value="Visa"> Visa</label>
+                                        <label class="cards" for="master_card"><input id="master_card" type="radio" name="Card" value="MasterCard"> MasterCard</label>
+                                        <label class="cards" for="american_express"><input id="american_express" type="radio" name="Card" value="American Express"> American Express</label>
+                                    </div>
+                                    <div class="card_number">
+                                        <label class="cart-text">Enter credit card number <span class="required_symbol">*</span></label>
+                                        <input id="credit_number" type="number" name="Credit_number">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="cart-bttn">
+                                <input type="reset" value="Reset">
+                                <input type="submit" value="Take my order">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-block">
+            <div id="footer-logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div id="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Address: Ha Noi, Viet Nam</li>
+                    <li><i class="fa-solid fa-square-phone-flip"></i> Hotline: +84-123-456-789</li>
+                    <li><i class="fa-solid fa-envelope"></i> Email: customerservice@dreamycafe.com.vn</li>
+                    <li><i class="fa-solid fa-clock"></i> Opening time: 08:00 - 23:00</li>
+                </ul>
+            </div>
+            <div id="footer-social">
+                <h3>Social</h3>
+                <ul id="footer-social-icon">
+                    <li><a href="smaller_webpages/page_not_found.html"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="smaller_webpages/page_not_found.html"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="smaller_webpages/page_not_found.html"><i class="fa-brands fa-spotify"></i></a></li>
+                </ul>
+            </div>
+            <div id="copyright">
+                ©Copyright 2022, Designed by B-IT Group
+            </div>
+        </div>
+    </footer>
+    <script src="js/order.js"></script>
+
+</body>
+</html>

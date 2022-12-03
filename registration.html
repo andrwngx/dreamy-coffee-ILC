@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Dreamy Cafe">
+    <meta name="keywords"    content="Dreamy Cafe Online Shop">
+    <meta name="author"      content="B-IT Group">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Cafe</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <nav>
+                <div class="row">
+                    <div class="nav-row">
+                        <div class="logo">
+                            <a href="index.html"><img src="images/logo.png" alt="dreamy cafe"></a>
+                        </div>
+                        <div class="navbar">
+                            <div class="navmenu">
+                                <ul>
+                                    <li class="nav-content"><a href="index.html">Home</a></li>
+                                    <li class="nav-content"><a href="smaller_webpages/contact.html">Contact</a></li>
+                                </ul>    
+                            </div>
+                            <div class="personal">
+                                <div class="p-items">
+                                    <a id="nav_regi" class="regi" href="registration.html">Register</a>
+                                    <a class="cart" href="order.html"><i class="fa-solid fa-cart-shopping"></i></a>    
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="reg-main">
+        <div id="reg-form">
+            <div id="reg-form-header">
+                <h2>Create an account <i class="fa-solid fa-circle-info fa-beat-fade" style="--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075;" ></i></h2>
+                <p id="reg-form-join">Join us to earn weely coupons, get free refills, and more.</p>
+            </div>
+            <div id="reg-form-container">
+                <div id="reg-form-content">
+                    <form id="registration_form" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                        <p id="reg-form-content-req"><span class="required_symbol">*</span> indicates required field</p>
+                        <div class="reg-form-groups">
+                            <fieldset class="reg-field">
+                                <h3>Personal Information</h3>
+                                <label for="first_name">First Name <span class="required_symbol">*</span></label>
+                                <input type="text" name="First_name" id="first_name" placeholder="Dreamy">
+                                <label for="last_name">Last Name <span class="required_symbol">*</span></label>
+                                <input type="text" name="Last_name" id="last_name" placeholder="Cafe">
+                                <label for="dob">Date of Birth <span class="required_symbol">*</span></label>
+                                <input type="date" name="Date_of_birth" id="dob">
+                                <p> 
+                                    <label>Gender <span class="required_symbol">*</span></label>
+                                    <label class="genopt"><input type="radio" name="Gender" value="Male" id="genderM"> Male</label>
+                                    <label class="genopt"><input type="radio" name="Gender" value="Female" id="genderF"> Female</label>
+                                    <label class="genopt"><input type="radio" name="Gender" value="Other" id="genderO"> Other</label>
+                                </p>
+                                <label for="postcode">Postcode <span class="required_symbol">*</span></label>
+                                <input type="number" name="Postcode" id="postcode" placeholder="3000">
+                                <label for="favourite_drink" id="favourite-drink-header">Favourite Drink <span class="required_symbol">*</span></label>
+                                <select id="favourite_drink" name="Favourite_drink">
+                                    <option value="none" id="none-favourite-drink">Choose your favourite drink</option>
+                                    <option value="Caramel Brulée Latte">Caramel Brulée Latte</option>
+                                    <option value="Caramel Macchiato">Caramel Macchiato</option>
+                                    <option value="Irish Cold Brew">Irish Cold Brew</option>
+                                    <option value="Cappuccino Deep Whipping Foam">Cappuccino Deep Whipping Foam</option>
+                                    <option value="Toasted White Chocolate Mocha">Toasted White Chocolate Mocha</option>
+                                    <option value="Honey Almondmilk Flat White">Honey Almondmilk Flat White</option>
+                                </select>
+                                <br>
+                            </fieldset>
+                            <fieldset class="reg-field">
+                                <h3>Acount Security</h3>
+                                <div id="username">
+                                    <label for="email">Email <span class="required_symbol">*</span></label>
+                                    <input type="email" name="Email" id="email" placeholder="customerservice@dreamycafe.com.vn">
+                                    <p>This will be your username also.</p>    
+                                </div>
+                                <div id="password">
+                                    <label for="pass">Password <span class="required_symbol">*</span></label>
+                                    <input type="password" name="Password" id="pass">
+                                    <p>Create a password that is at least 7-character long and includes at least 1 number.</p>
+                                    <label for="repass">Retype Password <span class="required_symbol">*</span></label>
+                                    <input type="password" name="Retype_Password" id="repass">
+                                </div>
+                            </fieldset>
+                            <fieldset class="reg-field">
+                                <h5>Email is a great way to know about offers and what's new from Dreamy Cafe.</h5>
+                                <input type="checkbox" name="receive email" id="check-rec-em">
+                                <span id="receive_email">I want to receive email from <strong>Dreamy Cafe</strong></span>
+                            </fieldset>
+                            <div class="reg-bttn">
+                                <input type="submit" value="Create account">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-block">
+            <div id="footer-logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div id="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Address: Ha Noi, Viet Nam</li>
+                    <li><i class="fa-solid fa-square-phone-flip"></i> Hotline: +84-123-456-789</li>
+                    <li><i class="fa-solid fa-envelope"></i> Email: customerservice@dreamycafe.com.vn</li>
+                    <li><i class="fa-solid fa-clock"></i> Opening time: 08:00 - 23:00</li>
+                </ul>
+            </div>
+            <div id="footer-social">
+                <h3>Social</h3>
+                <ul id="footer-social-icon">
+                    <li><a href="smaller_webpages/page_not_found.html"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="smaller_webpages/page_not_found.html"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="smaller_webpages/page_not_found.html"><i class="fa-brands fa-spotify"></i></a></li>
+                </ul>
+            </div>
+            <div id="copyright">
+                ©Copyright 2022, Designed by B-IT Group
+            </div>
+        </div>
+    </footer>
+    <script src="js/registration.js"></script>
+
+</body>
+</html>
